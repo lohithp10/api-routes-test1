@@ -1,14 +1,13 @@
 export default function handler(req, res) {
   if (req.method !== 'POST') {
-    res.status(200).json({ message: 'flightschedule' });
-    return;
+    return res.status(200).json({ message: 'flightschedule' });
   } else {
     const body = JSON.parse(req.body);
     console.log(body);
     if (body?.arrivalAirportScheduled) {
-      res.status(200).json({ message: 'flightschedule' });
+      return res.status(200).json({ message: 'flightschedule' });
     } else {
-      res.status(405).json({ message: 'Bad Request' });
+      return res.status(200).json({ message: 'Bad Request' });
     }
   }
 
