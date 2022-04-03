@@ -8,7 +8,7 @@ export default function handler(req, res) {
     if (body?.arrivalAirportScheduled) {
       res.status(200).json({ message: 'flight/schedule' });
     } else {
-      res.status(405).json({ message: 'Bad Request' });
+      res.status(400).json({ message: 'Bad Request' });
     }
   }
 
