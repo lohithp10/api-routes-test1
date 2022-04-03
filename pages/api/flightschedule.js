@@ -1,13 +1,13 @@
-export default function handler(req, res) {
+export default async function handler(req, res) {
   if (req.method !== 'POST') {
     res.status(200).json({ message: 'flightschedule' });
   } else {
     const body = JSON.parse(req.body);
     console.log(body);
     if (body?.arrivalAirportScheduled) {
-      res.send({ message: 'flightschedule' });
+      res.status(200).send({ message: 'flightschedule' });
     } else {
-      res.send({ message: 'Bad Request' });
+      res.status(200).send({ message: 'Bad Request' });
     }
   }
 
