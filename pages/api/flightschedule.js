@@ -7,7 +7,8 @@ export default async function handler(req, res) {
     // if (body?.arrivalAirportScheduled) {
     //   res.status(200).send({ message: 'flightschedule' });
     // } else {
-    res.status(200).send({ message: 'Bad Request' });
+    // res.status(200).send({ message: 'Bad Request' });
+    res.status(201).json({ message: 'Bad Request' });
     // }
   }
 
